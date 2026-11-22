@@ -36,23 +36,23 @@ navbar.addEventListener("click", (event) => {
     }, 3000);
 });
 
-const themeBtn = document.getElementById("themeBtn");
-themeBtn.addEventListener("click",(e) => {
-e.preventDefault();
-const icon = themeBtn.querySelector("svg");
-if (icon.getAttribute("data-lucide") === "moon") {
-    icon.setAttribute("data-lucide","sun");
-    themeBtn.setAttribute("data-label","Light Mode");
-    document.body.classList.remove("dark");
-} else {
-    icon.setAttribute("data-lucide","moon");
-    themeBtn.setAttribute("data-label","Dark Mode");
-    document.body.classList.add("dark");
-}
-lucide.createIcons();
-});
+// const themeBtn = document.getElementById("themeBtn");
+// themeBtn.addEventListener("click",(e) => {
+// e.preventDefault();
+// const icon = themeBtn.querySelector("svg");
+// if (icon.getAttribute("data-lucide") === "moon") {
+//     icon.setAttribute("data-lucide","sun");
+//     themeBtn.setAttribute("data-label","Light Mode");
+//     document.body.classList.remove("dark");
+// } else {
+//     icon.setAttribute("data-lucide","moon");
+//     themeBtn.setAttribute("data-label","Dark Mode");
+//     document.body.classList.add("dark");
+// }
+// lucide.createIcons();
+// });
 
-button = document.getElementById("scrollBtn");
+const button = document.getElementById("scrollBtn");
 window.addEventListener("scroll", ()=> {
     if (window.scrollY > 20) {
         button.classList.add("active");
