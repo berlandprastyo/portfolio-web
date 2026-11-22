@@ -36,21 +36,21 @@ navbar.addEventListener("click", (event) => {
     }, 3000);
 });
 
-// const themeBtn = document.getElementById("themeBtn");
-// themeBtn.addEventListener("click",(e) => {
-// e.preventDefault();
-// const icon = themeBtn.querySelector("svg");
-// if (icon.getAttribute("data-lucide") === "moon") {
-//     icon.setAttribute("data-lucide","sun");
-//     themeBtn.setAttribute("data-label","Light Mode");
-//     document.body.classList.remove("dark");
-// } else {
-//     icon.setAttribute("data-lucide","moon");
-//     themeBtn.setAttribute("data-label","Dark Mode");
-//     document.body.classList.add("dark");
-// }
-// lucide.createIcons();
-// });
+const themeBtn = document.getElementById("themeBtn");
+themeBtn.addEventListener("click",(e) => {
+e.preventDefault();
+const icon = themeBtn.querySelector("svg");
+if (icon.getAttribute("data-lucide") === "moon") {
+    icon.setAttribute("data-lucide","sun");
+    themeBtn.setAttribute("data-label","Light Mode");
+    document.body.classList.remove("dark");
+} else {
+    icon.setAttribute("data-lucide","moon");
+    themeBtn.setAttribute("data-label","Dark Mode");
+    document.body.classList.add("dark");
+}
+lucide.createIcons();
+});
 
 const button = document.getElementById("scrollBtn");
 window.addEventListener("scroll", ()=> {
@@ -69,17 +69,19 @@ button.addEventListener("click", () => {
 });
 
 const element = document.getElementById("typing");
-const teks = "Berland Prastiyo";
+
+const typeWriter = (typeElement,teks) => {
 let index = 0;
 const typing = () => {
 if (index < teks.length) {
-    element.textContent += teks[index];
+    typeElement.textContent += teks[index];
     index++;
     setTimeout(typing,200);
 }
 };
 typing();
-
+}
+typeWriter(element,"Berland Prastiyo");
 const observe = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

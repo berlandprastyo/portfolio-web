@@ -11,7 +11,129 @@ body {
     background: #dddddd;
 }
 body.dark {
-    background: #00061f;
+    background: #020615;
+}
+body.dark .navbar-floating {
+     background: rgba(0, 0, 0, 0.4);
+     border: 1px solid rgba(0, 0, 0, 0.35);
+     box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+}
+body.dark .navbar-floating a {
+    color: white;
+}
+body.dark .navbar-floating a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: white;
+}
+body.dark .navbar-floating a::after {
+     background: rgba(255, 255, 255, 0.5);
+     color: rgb(0, 0, 0);
+}
+body.dark .navbar-floating a.active {
+     background: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+}
+body.dark #scrollBtn {
+    background: white;
+    color: black;
+}
+body.dark .home {
+    border: 1px solid rgb(115, 115, 115);
+    color: white;
+}
+body.dark .greeting h1 {
+    border-right: 3px solid rgb(255, 255, 255);
+    color: rgb(181, 181, 255);
+}
+body.dark .quick-info {
+    background:#081030 ;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+body.dark .about {
+    color: white;
+}
+body.dark .logo-item  img{
+    border: 1px solid white;
+    border-radius: 10px;
+}
+body.dark .logo-item.mikrotik img {
+    background: white;
+}
+body.dark .logo-item.cisco img {
+    background: white;
+}
+body.dark .strength-item {
+    border-left: 3px solid rgb(181, 181, 255);
+}
+body.dark .skills {
+    color: white;
+}
+body.dark .skill-card {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+body.dark .skill-item.github{
+    color: white;
+}
+body.dark .skill-item.mikrotik img {
+    background: white;
+    border-radius: 10px ;
+}
+body.dark .skill-item.cisco img {
+    background: white;
+    border-radius: 10px ;
+}
+body.dark .projects {
+    color: white;
+}
+body.dark .project-card {
+    background:#081030;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+body.dark .project-info a:hover {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
+body.dark .contact-content {
+    color: white;
+}
+body.dark .social-links a i {
+    color: white;
+}
+body.dark .social-item {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+body.dark .social-item:hover {
+     background:#081030;
+}
+body.dark .contact-form {
+    background:#081030;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+body.dark .form-group input {
+    background: #0f1a44;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+body.dark .form-group input:focus {
+    border-color: #4f87ff;
+}
+body.dark .form-group textarea:focus {
+    border-color: #4f87ff;
+}
+body.dark .form-group textarea {
+     background: #0f1a44;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+body.dark .contact-form button {
+     background: #ffffff;
+     color: black;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+body.dark .contact-form button:hover {
+    background: #b6b6b6;
 }
 .left {
     opacity: 0;
@@ -60,7 +182,7 @@ body.dark {
     border-radius: 50px;
 
     /* Shadow */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 
     z-index: 1000;
@@ -151,7 +273,7 @@ opacity: 1;
     flex-direction: column;
     justify-content: center;
     gap: 50px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid currentColor;
 }
 
 /* HOME CONTENT */
@@ -289,7 +411,7 @@ transform: translateY(-2px);
     padding: 100px 8%;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid currentColor;
 }
 
 .about-content {
@@ -373,13 +495,20 @@ transform: translateY(-2px);
 .projects {
     min-height: 100vh;
     padding: 100px 8%;
-    border: 1px solid black;
+    border-bottom: 1px solid currentColor;
 }
 
 .projects-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+.project-heading {
+     margin-bottom: 40px;
+}
+.projects-content h2 {
+    font-size: 36px;
+    margin: 10px 0;
 }
 
 .project-grid {
@@ -394,7 +523,7 @@ transform: translateY(-2px);
     border-radius: 16px;
     background: #eeeeee;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
 .project-card:hover {
@@ -483,7 +612,9 @@ transform: translateY(-2px);
     flex-direction: column;
     gap: 20px;
 }
-
+ .contact-heading {
+     margin-bottom: 40px;
+ }
 .contact-info h2 {
     font-size: 2.5rem;
 }
@@ -619,6 +750,7 @@ transform: translateY(-2px);
 
 #skills {
     padding: 100px 8%;
+    border-bottom: 1px solid currentColor;
 }
 
 .section-heading {
@@ -648,9 +780,8 @@ transform: translateY(-2px);
 
 .skill-card {
     padding: 25px;
-    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     border-radius: 16px;
-    background: var(--card-background);
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -690,11 +821,15 @@ transform: translateY(-2px);
     font-size: 14px;
     min-width: 0;
 }
+.skill-item.github i, .social-links a i {
+    font-size: 25px;
+}
 
 .skill-item img {
     width: 30x;
     height: 30px;
     object-fit:contain;
+    overflow: hidden;
     flex-shrink: 1;
 }
 
@@ -835,9 +970,6 @@ transform: translateY(-2px);
         font-size: 28px;
     }
 
-    .section-heading p {
-        font-size: 14px;
-    }
 
     .skills-container {
         grid-template-columns: 1fr;
